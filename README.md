@@ -35,9 +35,12 @@ No Android Studio siga os seguintes passos:
 2. Insira a localização do diretório do módulo de biblioteca deste projeto e clique em Finish. 
 3. Abra o arquivo build.gradle do módulo de aplicativo e adicione uma nova linha ao bloco dependencies:
 <pre><code>dependencies {
-    compile project(":accessibilityteste")
+    compile project(path: ':accessibilityTestAndroid')
 }</code></pre>
-
+4, No arquivo <b>setting.gradle</b> na primeira linha deve conter o seguinte conteúdo:
+<pre><code>
+    include ':app', ':accessibilityTestAndroid'
+</code></pre>
 Com isso a biblioteca e todas as dependências são adicionadas.
 
 Para utilizar o teste basta escolher uma activity e adicionar o seguinte código:
@@ -46,7 +49,7 @@ Para utilizar o teste basta escolher uma activity e adicionar o seguinte código
     AccessibilityTest.validate(context, id_layout_xml, email_para_receber_relatorio);
 </code></pre>
 - context: contexto da aplicação, pode ser passado com o comando <b>this</b>
-- id_layout_xml: número do id da layout xml, pode ser passada com o comando <b>R.id.main_activity.xml</b>
+- id_layout_xml: número do id da layout xml, pode ser passada com o comando <b>R.layout.main_activity.xml</b>
 - email_para_receber_relatorio: e-mail para envio do relatório ao final do teste
 
 
