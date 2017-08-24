@@ -13,7 +13,7 @@ O TalkBack é um serviço de acessibilidade que ajuda usuários com deficiência
 
 ## Library AccessibilityTest
 
-O código se trata de um módulo para Android que através de uma única função faz toda a leitura de uma activity (arquivo xml) e através de uma análise automatica e detalhada, retorna um feedback via e-mail, descrevendo todos os pontos de melhoria para integrar a app em analise com o talkback.
+O código se trata de um módulo para Android que através de uma única função faz toda a leitura de uma activity (arquivo xml) e através de uma análise automática e detalhada, retorna um feedback via e-mail, descrevendo todos os pontos de melhoria para integrar a app em análise com o talkback.
 
 Itens do Layout que são verificados para saber se estão com suporte a acessibilidade:
 - ImageView
@@ -35,7 +35,7 @@ No Android Studio siga os seguintes passos:
 2. Insira a localização do diretório do módulo de biblioteca deste projeto e clique em Finish. 
 3. Abra o arquivo build.gradle do módulo de aplicativo e adicione uma nova linha ao bloco dependencies:
 <pre><code>dependencies {
-    compile project(":accessibilityteste-debug")
+    compile project(":accessibilityteste")
 }</code></pre>
 
 Com isso a biblioteca e todas as dependências são adicionadas.
