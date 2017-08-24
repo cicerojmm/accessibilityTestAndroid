@@ -31,12 +31,9 @@ Pré Requisitos
 - Projeto com SDK 25 ou Superior
 
 No Android Studio siga os seguintes passos:
-1. Clique em File > New Module.
-2. Clique em Import .JAR/.AAR Package e em Next.
-3. Insira a localização do arquivo AAR que está dentro deste projeto e clique em Finish.
-4. Clique em File > New > Import Module.
-5. Insira a localização do diretório do módulo de biblioteca deste projeto e clique em Finish. 
-6. Abra o arquivo build.gradle do módulo de aplicativo e adicione uma nova linha ao bloco dependencies:
+1. Clique em File > New > Import Module.
+2. Insira a localização do diretório do módulo de biblioteca deste projeto e clique em Finish. 
+3. Abra o arquivo build.gradle do módulo de aplicativo e adicione uma nova linha ao bloco dependencies:
 <pre><code>dependencies {
     compile project(":accessibilityteste-debug")
 }</code></pre>
