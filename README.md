@@ -27,7 +27,7 @@ Itens do Layout que são verificado para saber se estão com suporte a acessibil
 
 ### Como utilizar a Library para Android
 Pré Requisitos
-- Gradle
+- Gradle 2 ou Superior
 - Projeto com SDK 25 ou Superior
 
 No Android Studio siga os seguintes passos:
@@ -45,7 +45,7 @@ Com isso a biblioteca e todas as dependências são adicionadas.
 
 Para utilizar o teste basta escolher uma activity e adicionar o seguinte código:
 
-<pre><code>dependencies {
+<pre><code>
     AccessibilityTest.validate(context, id_layout_xml, email_para_receber_relatorio);
 </code></pre>
 
