@@ -168,7 +168,7 @@ public class ValidateAccessibleTag {
         e trata a resposta caso tenha essse valor
      */
     private void validateAtributeVisibility(String contentTag, String nameTag, StringBuilder htmlBuilder) {
-        String warning/
+        String warning;
 
         if(!contentTag.contains("visibility")) {
             warning = "<h3>" + nameTag + "</h3>";
