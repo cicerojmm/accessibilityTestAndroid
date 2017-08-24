@@ -45,7 +45,8 @@ public class ValidateAccessibleTag {
         }
 
         if(!contentTag.contains("labelFor")) {
-            warning = "Não contém o labelFor no EditText";
+            warning = "<h3>EditText</h3>";
+            warning += "Não contém o labelFor no EditText";
 
             htmlBuilder.append(warning);
         }
@@ -142,8 +143,11 @@ public class ValidateAccessibleTag {
         e tratando a resposta conforme o valor
      */
     private void validateAtributeMin(String contentTag, String nameTag, StringBuilder htmlBuilder) {
+        String warning;
+
         if(!contentTag.contains("minWidth") || !contentTag.contains("minHeight")) {
-            String warning = "<p>É uma boa prática colocar o minWidth e minHeight no " + nameTag +
+            warning = "<h3>" + nameTag + "</h3>";
+            warning += "<p>É uma boa prática colocar o minWidth e minHeight no " + nameTag +
                                     ", o valor sugerido é de 48dp</p>";
 
             htmlBuilder.append(warning);
@@ -157,8 +161,11 @@ public class ValidateAccessibleTag {
         e trata a resposta caso tenha essse valor
      */
     private void validateAtributeVisibility(String contentTag, String nameTag, StringBuilder htmlBuilder) {
+        String warning/
+
         if(!contentTag.contains("visibility")) {
-            String warning = "<p>A tag " + nameTag +" possui o atributo Visibility, o mesmo deve ser tratado e avisado" +
+            warning = "<h3>" + nameTag + "</h3>";
+            warning += "<p>A tag " + nameTag +" possui o atributo Visibility, o mesmo deve ser tratado e avisado" +
                                 "quando ficar visivel na tela<p>";
 
             htmlBuilder.append(warning);
