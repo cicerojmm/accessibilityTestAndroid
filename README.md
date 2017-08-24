@@ -5,7 +5,7 @@ Aplicativos para Android devem ser utilizados por todos, incluindo pessoas com d
 
 As deficiências comuns que afetam o uso de um dispositivo Android pela pessoa incluem cegueira ou visão baixa, cegueira de cor, surdez ou deficiência auditiva e habilidades motoras restritas. Quando você desenvolve aplicativos com acessibilidade em mente, você melhora a experiência do usuário. Não só para usuários com essas deficiências, mas também para todos os outros usuários.
 
-Essa bilbioteca em questão realiza a validação para identificar se o seu aplicativo possui acessinilidade para deficientes visuais ou pessoas com baixa visão, provendo assim uma integração com o TalkBack.
+Essa biblioteca em questão realiza a validação para identificar se o seu aplicativo possui acessibilidade para deficientes visuais ou pessoas com baixa visão, provendo assim uma integração com o TalkBack.
 
 O que  o TalkBack?
 O TalkBack é um serviço de acessibilidade que ajuda usuários com deficiência visual ou com problemas de visão a interagir com seus respectivos dispositivos. Esse app implementa o feedback falado, audível e por vibração ao seu dispositivo. Ele vem pré-instalado na maioria dos dispositivos Android.
@@ -45,6 +45,10 @@ Para utilizar o teste basta escolher uma activity e adicionar o seguinte código
 <pre><code>
     AccessibilityTest.validate(context, id_layout_xml, email_para_receber_relatorio);
 </code></pre>
+- context: contexto da aplicação, pode ser passado com o comando <b>this</b>
+- id_layout_xml: número do id da layout xml, pode ser passada com o comando <b>R.id.main_activity.xml</b>
+- email_para_receber_relatorio: e-mail para envio do relatório ao final do teste
+
 
 Adicione as importaçõess necessários e execute sua aplicação normalmente ou com o debugger.
 
