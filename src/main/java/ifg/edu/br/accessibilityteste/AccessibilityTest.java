@@ -52,6 +52,7 @@ public class AccessibilityTest {
             int eventType = xmlParser.getEventType();
 
             while (eventType != XmlPullParser.END_DOCUMENT) {
+                if(eventType!=3) {
                 String nameTag = xmlParser.getName();
 
                 for(int i =0; i < xmlParser.getAttributeCount(); i++){
@@ -64,7 +65,7 @@ public class AccessibilityTest {
                 }
 
                 analyzeTags(nameTag, stringBuilder.toString());
-
+                }
                 xmlParser.next();
 
                 eventType = xmlParser.getEventType();
