@@ -15,7 +15,7 @@ O TalkBack é um serviço de acessibilidade que ajuda usuários com deficiência
 
 O código se trata de um módulo para Android que através de uma única função faz toda a leitura de uma activity (arquivo xml) e através de uma análise automatica e detalhada, retorna um feedback via e-mail, descrevendo todos os pontos de melhoria para integrar a app em analise com o talkback.
 
-Itens do Layout que são verificado para saber se estão com suporte a acessibilidade:
+Itens do Layout que são verificados para saber se estão com suporte a acessibilidade:
 - ImageView
 - ImageButton
 - Button
