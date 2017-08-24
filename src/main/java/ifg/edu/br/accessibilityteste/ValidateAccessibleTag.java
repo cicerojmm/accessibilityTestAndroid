@@ -14,7 +14,6 @@ public class ValidateAccessibleTag {
     private EmailSender emailSender;
 
 
-
     /*
         Método para validar a tag TextView conforme boas práticas de Acessibilidade
      */
@@ -24,7 +23,15 @@ public class ValidateAccessibleTag {
         if(!contentTag.contains("contentDescription")) {
 
             warning = "<h3>TextView</h3>";
-            warning += "<p>Não contém o contentDescription no TextView</p>";
+            warning += "<p>Não contém o atributo <b>contentDescription</b></p>";
+
+            htmlBuilder.append(warning);
+        }
+
+        if(!contentTag.contains("accessibilityLiveRegion")) {
+
+            warning = "<h3>TextView</h3>";
+            warning += "<p>Não contém o atributo <b>accessibilityLiveRegion</b> para identificar texto que passam a surgir na tela</p>";
 
             htmlBuilder.append(warning);
         }
@@ -38,7 +45,7 @@ public class ValidateAccessibleTag {
 
         if(!contentTag.contains("hint")) {
             warning = "<h3>EditText</h3>";
-            warning += "Não contém o hint no EditText";
+            warning += "Não contém o atributo <b>hint</b> para descrever o conteúdo a ser inserido no campo";
 
             htmlBuilder.append(warning);
 
@@ -46,7 +53,7 @@ public class ValidateAccessibleTag {
 
         if(!contentTag.contains("labelFor")) {
             warning = "<h3>EditText</h3>";
-            warning += "Não contém o labelFor no EditText";
+            warning += "Não contém o atributo <b>labelFor</b> para agrupar a descrição com o EditText";
 
             htmlBuilder.append(warning);
         }
@@ -62,7 +69,7 @@ public class ValidateAccessibleTag {
 
         if(!contentTag.contains("contentDescription")) {
             warning = "<h3>ImageView</h3>";
-            warning += "<p>Não contém o contentDescription na ImageView</p>";
+            warning += "<p>Não contém o atributo <b>contentDescription</b> para descrever a imagem</p>";
 
             htmlBuilder.append(warning);
 
@@ -77,7 +84,7 @@ public class ValidateAccessibleTag {
 
         if(!contentTag.contains("contentDescription")) {
             warning = "<h3>Button</h3>";
-            warning += "<p>Não contém o contentDescription no Button</p>";
+            warning += "<p>Não contém o <b>contentDescription</b> para descrever ação do botão</p>";
 
             htmlBuilder.append(warning);
 
@@ -96,7 +103,7 @@ public class ValidateAccessibleTag {
 
         if(!contentTag.contains("contentDescription")) {
             warning = "<h3>ImageButton</h3>";
-            warning += "<p>Não contém o contentDescription no ImageButton</p>";
+            warning += "<p>Não contém o atributo <b>contentDescription</b> para descrever a ação da imagem</p>";
             htmlBuilder.append(warning);
         }
 
@@ -112,7 +119,7 @@ public class ValidateAccessibleTag {
 
         if(!contentTag.contains("focusable")) {
             warning = "<h3>LinearLayout</h3>";
-            warning += "<p>O layout de estilo LinearLayout não possui o focusable para agrupamento de layouts</p>";
+            warning += "<p>O layout não possui o atributo <b>focusable</b> para agrupamento de layouts e colocar destaque no atual</p>";
 
             htmlBuilder.append(warning);
         }
@@ -129,7 +136,7 @@ public class ValidateAccessibleTag {
         if(!contentTag.contains("focusable")) {
 
             warning = "<h3>RelativeLayout</h3>";
-            warning += "<p>O layout de estilo RelativeLayout não possui o focusable para agrupamento de layouts</p>";
+            warning += "<p>O layout de estilo RelativeLayout não possui o atributo <b>focusable</b> para destaque do layout atual</p>";
 
             htmlBuilder.append(warning);
 
@@ -147,8 +154,8 @@ public class ValidateAccessibleTag {
 
         if(!contentTag.contains("minWidth") || !contentTag.contains("minHeight")) {
             warning = "<h3>" + nameTag + "</h3>";
-            warning += "<p>É uma boa prática colocar o minWidth e minHeight no " + nameTag +
-                                    ", o valor sugerido é de 48dp</p>";
+            warning += "<p>É uma boa prática colocar o <b>minWidth</b> e <b>minHeight</b> no " + nameTag +
+                    ", o valor sugerido é de 48dp para os dois</p>";
 
             htmlBuilder.append(warning);
 
@@ -165,8 +172,8 @@ public class ValidateAccessibleTag {
 
         if(!contentTag.contains("visibility")) {
             warning = "<h3>" + nameTag + "</h3>";
-            warning += "<p>A tag " + nameTag +" possui o atributo Visibility, o mesmo deve ser tratado e avisado" +
-                                "quando ficar visivel na tela<p>";
+            warning += "<p>A tag " + nameTag +" possui o atributo <b>Visibility</b>, o mesmo deve ser tratado e avisado" +
+                    "quando ficar visivel na tela<p>";
 
             htmlBuilder.append(warning);
         }
@@ -174,3 +181,4 @@ public class ValidateAccessibleTag {
 
 
 }
+
