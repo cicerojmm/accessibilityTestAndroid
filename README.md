@@ -10,9 +10,10 @@ Essa biblioteca em questão realiza a validação para identificar se o seu apli
 O que  o TalkBack?
 O TalkBack é um serviço de acessibilidade que ajuda usuários com deficiência visual ou com problemas de visão a interagir com seus respectivos dispositivos. Esse app implementa o feedback falado, audível e por vibração ao seu dispositivo. Ele vem pré-instalado na maioria dos dispositivos Android.
 
+## Qual problema precisa ser solucionado?
+Apesar que a Google fornece uma ampla documentação sobre acessibilidade voltada para Material Design e o talkback, ainda é um assunto desconhecido por diversos desenvolvedores. E tem o fato de não existir atualmente nenhuma ferramenta que venha realizar uma análise automatica sobre app's indicando se o mesmo está oferecendo suporte ou não ao talkback, ou seja, se ele é um aplicativo que oferece acessibilidade para pessoas com algum tipo de deficiência ou não.
 
 ## Library AccessibilityTest
-
 O código se trata de um módulo para Android que através de uma única função faz toda a leitura de uma activity (arquivo xml) e através de uma análise automática e detalhada, retorna um feedback via e-mail, descrevendo todos os pontos de melhoria para integrar a app em análise com o talkback.
 
 Itens do Layout que são verificados para saber se estão com suporte a acessibilidade:
